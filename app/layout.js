@@ -1,5 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import BootstrapClient from "./(components)/clinetComponent/page";
+import NavBar from "./(components)/navBar/page";
+import Footer from "./(components)/footer/page";
+import { StoreProvider } from "@/store/StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <NavBar></NavBar>
+        <StoreProvider>{children}</StoreProvider>
+        <Footer></Footer>
+        <BootstrapClient />
+      </body>
     </html>
   );
 }
