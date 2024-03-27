@@ -4,21 +4,6 @@ import SearchCountry from "../searchCountry/page";
 import { useDispatch, useSelector } from "react-redux";
 import { getWeather } from "@/store/slice";
 
-// export async function getData(country = "cairo") {
-//   const res = await fetch(
-//     `https://api.weatherapi.com/v1/forecast.json?key=f623af5d7ba94d1a992112233240101&q=${country}&days=3`
-//   );
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
-
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// }
-
 export default function myHome() {
   const data = useSelector((state) => state.wether.wetherList);
   let dispatch = useDispatch();
