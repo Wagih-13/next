@@ -13,7 +13,7 @@ import { useId } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const metadata = {
+export const metadata = {
   title: "Weather app",
   description:
     "A weather app is a website that provides weather forecasts and weather-related information. They typically provide current weather conditions, as well as forecasts for the future. Some weather websites also provide weather maps, radar, and satellite imagery.",
