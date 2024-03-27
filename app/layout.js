@@ -1,4 +1,3 @@
-"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,15 +7,15 @@ import NavBar from "./(components)/navBar/page";
 import Footer from "./(components)/footer/page";
 import { StoreProvider } from "@/store/StoreProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { AnimatePresence, motion } from "framer-motion";
 import { useId } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
- const metadata = {
+export const metadata = {
   title: "Weather app",
   description: "A weather app is a website that provides weather forecasts ",
 };
+
 export default function RootLayout({ children }) {
   let id = useId();
   return (
@@ -25,9 +24,7 @@ export default function RootLayout({ children }) {
         <SpeedInsights></SpeedInsights>
         <NavBar></NavBar>
         <StoreProvider>
-          <AnimatePresence mode="awit">
-            <motion.div key={id}> {children}</motion.div>
-          </AnimatePresence>
+          <div key={id}> {children}</div>
         </StoreProvider>
         <Footer></Footer>
         <BootstrapClient />
