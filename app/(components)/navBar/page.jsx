@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import "./navModule.css";
 import logo from "../../assets/images/logo.png";
-import Link from "next/link";
 
 export default function NavBar() {
   return (
